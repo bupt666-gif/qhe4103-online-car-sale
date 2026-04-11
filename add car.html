@@ -1,15 +1,59 @@
 <html>
 <head>
     <title>Add Car</title>
-    <style>
-        h1{
-            text-align: center;
-            color:aquamarine;
-            background: yellow;
-        }
+    <style type = "text/css">
+        body{background-color: white; font-family: Arial, sans-serif;}
+        h1{text-align: center;color:aquamarine;background: yellow;}
+        ul { list-style-type:none;position:relative; left:20%;}
+        li { float:left; border:solid 1px; background-color: gray; padding:10px 15px;}
+        li a { text-decoration: none; padding: 10px 15px;color: blue;}
+        span { color : red; }
+        p.p1 { text-align: center; color : green; font-size : 24pt;  background: blanchedalmond;}
+        p.p2 { text-align: center; color : gray; font-size: 20pt; }
+        p.p3 { color : rgb(6, 157, 244); font-size: 16pt; }
     </style>
 </head>
 <body>
-    <h1>Add Car</h1>
+    <h1>Online Car Sale Website</h1>
+    <br> 
+    <ul>
+    <li> <a href="index.html"> Home </a> </li>
+    <li> <a href="seller.html"> Seller </a> </li>
+    <li> <a href="add car.html"> Add Car</a> </li>
+    <li> <a href="search.html"> Search </a> </li>
+    </ul>
+    <br> <br>
+    <p class = "p1"> Add a New Car </p>
+    <p class = "p2"> Please enter the car information below. </p>
+    <p class = "p3"> Use this page to add a new car to the system. 
+    Please complete the form by entering the car’s key details, such as <span>color, brand, model, year, price, location, and condition</span>, so the vehicle can be displayed clearly and accurately.
+    </p>
+    <p style = "color: rgb(6, 157, 244); font-size: 16pt;"> Color </p>
+    <input type="text" placeholder="e.g blue, red..."> 
+    <br><br>
+    <p style = "color: rgb(6, 157, 244); font-size: 16pt;"> Brand </p>
+    <input type="text" placeholder="e.g Toyota, Honda..."> 
+    <br><br>
+    <p style = "color: rgb(6, 157, 244); font-size: 16pt;"> Model </p>
+    <input type="text" placeholder="e.g Camry, Civic..."> 
+    <br><br>
+    <p style = "color: rgb(6, 157, 244); font-size: 16pt;"> Year </p>
+    <input type="number" placeholder="e.g 2020, 2021..."> 
+    <br><br>
+    <p style = "color: rgb(6, 157, 244); font-size: 16pt;"> Price </p>
+    <input type="number" placeholder="e.g 20000, 30000..."> 
+    <br><br>
+    <p style = "color: rgb(6, 157, 244); font-size: 16pt;"> Location </p>
+    <input type="text" placeholder="e.g London, Manchester..."> 
+    <br><br>
+    <p style = "color: rgb(6, 157, 244); font-size: 16pt;"> Condition </p>
+    <input type="text" placeholder="e.g New, Used..."> 
+    <br><br>
+    <form>
+        <input type = "submit" value = "Submit" />
+    </form>
+    <footer>
+        <p>&copy; 2026 Online Car Sale Website. All rights reserved.</p>
+    </footer>
 </body>
 </html>
