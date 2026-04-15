@@ -60,7 +60,6 @@ button {
   background: none;
 }
 
-/* ===== Container ===== */
 
 .container {
   width: 100%;
@@ -69,7 +68,6 @@ button {
   padding: 0 24px;
 }
 
-/* ===== Header / Nav ===== */
 
 .site-header {
   position: fixed;
@@ -179,14 +177,12 @@ button {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ===== Main Content ===== */
 
 .site-main {
   flex: 1;
   margin-top: var(--header-height);
 }
 
-/* ===== Footer ===== */
 
 .site-footer {
   background: var(--color-gray-800);
@@ -221,7 +217,6 @@ button {
   color: var(--color-gray-400);
 }
 
-/* ===== Buttons (common) ===== */
 
 .btn {
   display: inline-flex;
@@ -257,9 +252,7 @@ button {
   border-color: var(--color-black);
 }
 
-/* ===== Responsive ===== */
 
-/* Tablet: <= 768px */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
@@ -296,8 +289,6 @@ button {
   }
 }
 
-/* ===== Section Title ===== */
-
 .section-title {
   font-size: 2rem;
   font-weight: 600;
@@ -307,7 +298,6 @@ button {
   color: var(--color-black);
 }
 
-/* ===== Hero ===== */
 
 .hero {
   position: relative;
@@ -363,7 +353,6 @@ button {
   pointer-events: none;
 }
 
-/* ===== Features ===== */
 
 .features {
   padding: 96px 0;
@@ -404,7 +393,6 @@ button {
   color: var(--color-gray-600);
 }
 
-/* ===== Featured Cars ===== */
 
 .featured-cars {
   padding: 96px 0;
@@ -481,7 +469,6 @@ button {
   margin-top: 48px;
 }
 
-/* ===== Footer Course Line ===== */
 
 .footer-course {
   font-size: 0.75rem;
@@ -489,9 +476,6 @@ button {
   opacity: 0.7;
 }
 
-/* ===== Responsive ===== */
-
-/* Tablet: <= 768px */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
@@ -525,7 +509,6 @@ button {
   }
 }
 
-/* Large phone: <= 480px */
 @media (max-width: 480px) {
   .container {
     padding: 0 16px;
@@ -560,7 +543,6 @@ button {
   }
 }
 
-/* ===== Page Hero (sub-pages) ===== */
 
 .page-hero {
   background: var(--color-gray-100);
@@ -588,7 +570,6 @@ button {
   color: var(--color-gray-600);
 }
 
-/* ===== Action Cards (Seller Page) ===== */
 
 .seller-actions {
   padding: 80px 0 96px;
@@ -643,7 +624,6 @@ button {
   flex: 1;
 }
 
-/* ===== Responsive: Page Hero & Action Cards ===== */
 
 @media (max-width: 768px) {
   .page-hero {
@@ -674,4 +654,71 @@ button {
   .action-card {
     padding: 36px 24px 32px;
   }
+}
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-gray-100);
+  padding: 20px;
+}
+
+.auth-card {
+  background: white;
+  padding: 40px 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--color-gray-800);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  background: white;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-black);
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--color-gray-600);
+}
+
+.auth-link a {
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
 }
