@@ -1,38 +1,26 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Car</title>
+    <title>Car Details</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .form-group {
-            margin-bottom: 24px;
-        }
+        .car-detail-title h2 {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        margin: 24px 0;
+        color: #111;
+    }
 
-        .form-group label {
-            display: block;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #111;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="number"] {
-            width: 100%;
-            padding: 14px 16px;
-            font-size: 16px;
-            border: 1px solid #999;
-            border-radius: 4px;
-            box-sizing: border-box;
-            background-color: white;
-        }
-        .car-form .btn-primary {
-        width: 100%;
-        padding: 14px;
-        }
+    .car-detail-info {
+        font-size: 16px;
+        color: #111;
+        line-height: 1.8;
+        padding: 0 0 24px 0;
+    }
     </style>
-</head>
 </head>
 <body>
     <header class="site-header">
@@ -43,12 +31,13 @@
         </svg>
         AutoHub
       </a>
+
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="seller.html">Seller</a></li>
-                    <li><a href="add car.html" class="active">Add Car</a></li>
-                    <li><a href="search.html">Search</a></li>
+                    <li><a href="add car.html">Add Car</a></li>
+                    <li><a href="search.html" class="active">Search</a></li>
                     <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
@@ -59,58 +48,44 @@
         <section class="page-hero">
             <div class="container">
                 <div class="page-hero-inner">
-                    <h1 class="page-hero-title">Add a New Car</h1>
+                    <h1 class="page-hero-title">Car Details</h1>
                     <p class="page-hero-subtitle">
-                        Please enter the car information below.
+                        View the complete information of the selected car.
                     </p>
-                    <p>
-                        Use this page to add a new car to the system. Please complete the form by entering the car’s key details, such as color, brand, model, year, price, location, and condition, so the vehicle can be displayed clearly and accurately.
+                    <p class="form-intro">
+                        This page shows the full details of the selected vehicle, including
+                        its model, year, colour, location, price, and seller information.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section class="form-section">
+        <section class="featured-cars">
             <div class="container">
-                <form class="car-form" id="addCarForm" onsubmit="return validateAddCarForm();">
-                    <div class="form-group">
-                        <label for="color">Color</label>
-                        <input type="text" id="color" name="color" placeholder="e.g blue, red..." required>
+                <div class="car-card">
+                    <div class="car-card-image">
+                        <img id = "detailImage" src="images/car1.jpg" alt="Toyota Camry">
                     </div>
-
-                    <div class="form-group">
-                        <label for="brand">Brand</label>
-                        <input type="text" id="brand" name="brand" placeholder="e.g Toyota, Honda..." required>
+                    <div class = "car-detail-title">
+                        <h2 id="detailTitle">Toyota Camry</h2>
                     </div>
+                    <div class="car-detail-info">
+                        <p><strong>Brand:</strong> <span id="detailBrand">Toyota</span></p>
+                        <p><strong>Model:</strong> <span id="detailModel">Camry</span></p>
+                        <p><strong>Year:</strong><span id="detailYear"> 2020</span></p>
+                        <p><strong>Colour:</strong> <span id="detailColor">Blue</span></p>
+                        <p><strong>Location:</strong> <span id="detailLocation">London</span></p>
+                        <p><strong>Price:</strong> £ <span id="detailPrice">20,000</span></p>
+                        <p><strong>Condition:</strong> <span id="detailCondition">Used</span></p>
+                        <p><strong>Seller Name:</strong> <span id="detailSeller">John Smith</span></p>
+                        <p><strong>Contact:</strong> johnsmith@email.com</p>
 
-                    <div class="form-group">
-                        <label for="model">Model</label>
-                        <input type="text" id="model" name="model" placeholder="e.g Camry, Civic..." required>
+                        <div class="car-card-footer">
+                            <a href="result.html" class="btn btn-secondary">Back to Results</a>
+                            <a href="search.html" class="btn btn-primary">Search Again</a>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="year">Year</label>
-                        <input type="number" id="year" name="year" placeholder="e.g 2020, 2021..." required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="price">Price</label>
-                        <input type="number" id="price" name="price" placeholder="e.g 20000, 30000...(Pounds)" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="location">Location</label>
-                        <input type="text" id="location" name="location" placeholder="e.g London, Manchester...">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="condition">Condition</label>
-                        <input type="text" id="condition" name="condition" placeholder="e.g New, Used...">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <br><br>
-                </form>
+                </div>
             </div>
         </section>
     </main>
