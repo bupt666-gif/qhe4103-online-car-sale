@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Cars</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"] {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 16px;
+            border: 1px solid #999;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+        .car-form .btn-primary {
+        width: 100%;
+        padding: 14px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="site-logo">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 2L2 26h6l6-14 6 14h6L14 2z" fill="#111"/>
+        </svg>
+        AutoHub
+      </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="seller.html">Seller</a></li>
+                    <li><a href="add car.html">Add Car</a></li>
+                    <li><a href="search.html" class="active">Search</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-inner">
+                    <h1 class="page-hero-title">Search Cars</h1>
+                    <p class="page-hero-subtitle">
+                        Find the car you are looking for by model and year.
+                    </p>
+                    <p>
+                        Use this page to search for available cars in the system. Enter the
+                        model name, the year, or both to view matching results quickly and clearly.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="container">
+                <form class="car-form" id="searchForm">
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <input type="text" id="model" name="model" placeholder="e.g Camry, Civic...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <input type="number" id="year" name="year" placeholder="e.g 2020, 2021...">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-copy">&copy; 2026 Online Car Sale Website. All rights reserved.</p>
+        </div>
+    </footer>
+<script src="js/main.js"></script>
+</body>
+</html>
