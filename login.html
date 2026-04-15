@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AutoHub – Login</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Seller Login - Car Sales Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="site-logo">
+   <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="site-logo">
         <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M14 2L2 26h6l6-14 6 14h6L14 2z" fill="#111"/>
         </svg>
         AutoHub
       </a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="seller.html">Seller</a>
-        <a href="search.html">Search</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="seller.html">Seller</a></li>
+                    <li><a href="add-car.html">Add Car</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="login.html" class="active">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h2 class="auth-title">Seller Login</h2>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+            <p class="auth-link">Don't have an account? <a href="register.html">Register as Seller</a></p>
+        </div>
     </div>
-  </header>
 
-  <main class="site-main">
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="seller.html">Seller</a>
-        <a href="search.html">Search</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-      </div>
-      <p class="footer-copy">&copy; 2026 AutoHub. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>
