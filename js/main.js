@@ -1,3 +1,13 @@
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (navToggle && navLinks) {
+    navToggle.addEventListener("click", function () {
+        navToggle.classList.toggle("open");
+        navLinks.classList.toggle("open");
+    });
+}
+
 function validateAddCarForm() {
     const color = document.getElementById("color").value.trim();
     const brand = document.getElementById("brand").value.trim();
@@ -140,7 +150,7 @@ if (resultsContainer) {
 
                     <div class="car-card-footer">
                         <span class="car-card-price">£${car.price}</span>
-                        <a href="detail.html?id=${car.id}" class="btn btn-primary btn-sm">View Details</a>
+                        <a href="car-detail.html?id=${car.id}" class="btn btn-primary btn-sm">View Details</a>
                     </div>
                 </div>
             </article>
