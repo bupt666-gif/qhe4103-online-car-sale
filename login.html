@@ -28,7 +28,7 @@
     <div class="auth-container">
         <div class="auth-card">
             <h2 class="auth-title">Seller Login</h2>
-            <form id="loginForm" class="auth-form">
+            <form id="loginForm" class="auth-form"onsubmit="return loginCheck()">
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" required placeholder="Enter your username">
