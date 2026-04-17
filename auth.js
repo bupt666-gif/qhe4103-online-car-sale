@@ -1,8 +1,12 @@
-document.addEventListener('DOMContentLoaded',function(){
-    const form=document.getElementById('loginForm');
-    form.addEventListener('submit',function(e){
-        e.preventDefault();
-        alert('Login Success!');
-        window.location.href='add-car.html';
-    });
-});
+function loginCheck() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    if (username == "admin" && password == "123456") {
+        alert("Login success");
+        return true;
+    } else {
+        alert("Username or password error");
+        return false;
+    }
+}
