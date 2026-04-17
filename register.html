@@ -3,48 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AutoHub – Register</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>CAR SALE - Seller Registration</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    :root {
+      --color-bg: #f5f5f5;
+      --color-text: #000;
+      --color-footer: #222;
+      --color-footer-text: #aaa;
+      --color-button: #000;
+      --color-button-text: #fff;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 1rem 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem; 
+      text-decoration: none;
+      color: var(--color-text);
+    }
+    .logo svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--color-text);
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: var(--color-text);
+    }
+    .hero {
+      background: var(--color-bg);
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      color: #555;
+    }
+    .form-section {
+      padding: 3rem 1rem;
+      display: flex;
+      justify-content: center; 
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+      max-width: 400px; 
+    }
+    input {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+    }
+    button {
+      background: var(--color-button);
+      color: var(--color-button-text);
+      border: none;
+      padding: 0.75rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      width: fit-content;
+    }
+
+    footer {
+      background: var(--color-footer);
+      color: var(--color-footer-text);
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .footer-links {
+      margin-bottom: 1rem;
+    }
+    .footer-links a {
+      color: var(--color-footer-text);
+      margin: 0 0.5rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .copyright {
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 <body>
-
-  <header class="site-header">
+  <header>
     <div class="container">
-      <a href="index.html" class="site-logo">
+      <a href="index.html" class="logo">
         <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14 2L2 26h6l6-14 6 14h6L14 2z" fill="#111"/>
+          <path d="M14 2L2 26h6l6-14 6 14h6L14 2z" fill="#000"/>
         </svg>
         AutoHub
       </a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
+      <nav>
+        <a href="index.html">HOME</a>
         <a href="seller.html">Seller</a>
         <a href="search.html">Search</a>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
   </header>
+  <section class="hero">
+    <h1>Seller Registration</h1>
+    <p>Join us to start selling your cars</p>
+  </section>
 
-  <main class="site-main">
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="seller.html">Seller</a>
-        <a href="search.html">Search</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
+  <section class="form-section">
+    <form id="regForm" onsubmit="return validateForm()">
+      <div>
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Only letters & space">
       </div>
-      <p class="footer-copy">&copy; 2026 AutoHub. All rights reserved.</p>
+      <div>
+        <label>Address</label>
+        <input type="text" id="address" placeholder="Letters, numbers & space">
+      </div>
+      <div>
+        <label>Phone</label>
+        <input type="text" id="phone" placeholder="China phone number">
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="text" id="email" placeholder="xxx@xx.com / xxx@xx.cn">
+      </div>
+      <div>
+        <label>Username</label>
+        <input type="text" id="user" placeholder="Min 6 letters/numbers">
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="password" id="pwd" placeholder="Min 6 letters/numbers">
+      </div>
+      <button type="submit">REGISTER</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="seller.html">Seller</a>
+      <a href="search.html">Search</a>
     </div>
+    <div class="copyright">© 2026 Car Sale. All rights reserved.</div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value.trim();
+      let address = document.getElementById("address").value.trim();
+      let phone = document.getElementById("phone").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let user = document.getElementById("user").value.trim();
+      let pwd = document.getElementById("pwd").value.trim();
+
+      let regName = /^[A-Za-z ]+$/;
+      if (!regName.test(name)) {
+        alert("Name can only contain letters and space");
+        return false;
+      }
+      let regAddr = /^[A-Za-z0-9 ]+$/;
+      if (!regAddr.test(address)) {
+        alert("Address can only contain letters, numbers and space");
+        return false;
+      }
+      let regPhone = /^1[3-9]\d{9}$/;
+      if (!regPhone.test(phone)) {
+        alert("Please enter valid China phone number");
+        return false;
+      }
+      let regEmail = /^[^@]+@[^@]+\.(com|cn)$/;
+      if (!regEmail.test(email)) {
+        alert("Email must have one @ and end with .com or .cn");
+        return false;
+      }
+      let regUser = /^[A-Za-z0-9]{6,}$/;
+      if (!regUser.test(user)) {
+        alert("Username must be at least 6 letters/numbers");
+        return false;
+      }
+      let regPwd = /^[A-Za-z0-9]{6,}$/;
+      if (!regPwd.test(pwd)) {
+        alert("Password must be at least 6 letters/numbers");
+        return false;
+      }
+      alert("Registration success!");
+      return true;
+    }
+  </script>
 </body>
 </html>
